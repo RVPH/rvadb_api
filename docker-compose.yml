@@ -1,0 +1,17 @@
+version: '3.2'
+services:
+    api:
+        build: eve-app
+        restart: always
+        expose:
+            - 5000
+        ports:
+            - 5000
+        env_file: .env
+        network_mode: bridge
+        logging:
+            driver: json-file
+            options:
+                max-file: '5'
+                max-size: 10m
+        command: '/usr/local/bin/gunicorn -w 2 -b :5000 app:app'
