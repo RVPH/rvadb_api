@@ -9,7 +9,7 @@ def pre_GET(resource, request, lookup):
         lookup["journal.issue"] = int(request.args["issue"])
 
 def on_fetched_resource(resource, response):
-    for document in response['_articles']:
+    for document in response['_items']:
         del(document['_etag'])
         del(document['_created'])
         del(document['_updated'])

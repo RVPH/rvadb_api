@@ -5,7 +5,6 @@ API_VERSION = 'v1beta1'
 PAGINATION = False
 HATEOAS = False
 SORTING = False
-ITEMS = '_articles'
 
 schema = {
     'doi': {},
