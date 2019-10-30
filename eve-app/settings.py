@@ -1,7 +1,7 @@
 import os
 
-import endpoints.articles
-import endpoints.current_issues
+import endpoints.articles.settings
+import endpoints.current_issues.settings
 
 MONGO_URI = os.environ['MONGO_URI']
 API_VERSION = 'v1beta1'
@@ -10,6 +10,6 @@ HATEOAS = False
 SORTING = False
 
 DOMAIN = {
-    'articles': endpoints.articles.settings,
-    'current_issues': endpoints.current_issues.settings
+    'articles': endpoints.articles.settings.settings,
+    'current_issues': endpoints.current_issues.settings.settings
 }
