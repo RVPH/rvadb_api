@@ -8,6 +8,7 @@ API_VERSION = 'v1beta1'
 PAGINATION = False
 HATEOAS = False
 SORTING = False
+X_DOMAINS = '*'
 
 DOMAIN = {
     'articles': endpoints.articles.settings.settings,
