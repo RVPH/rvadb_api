@@ -8,7 +8,8 @@ schema = {
     'rubric': {},
     'keywords': {},
     'references': {},
-    'pages': {}
+    'pages': {},
+    'fulltext': {}
 }
 
 settings = {
