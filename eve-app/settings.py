@@ -4,7 +4,7 @@ import endpoints.articles.settings
 import endpoints.current_issues.settings
 
 MONGO_URI = os.environ['MONGO_URI']
-API_VERSION = 'v1beta1'
+API_VERSION = 'v1'
 PAGINATION = False
 HATEOAS = False
 SORTING = False
