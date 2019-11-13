@@ -10,6 +10,8 @@ HATEOAS = False
 SORTING = False
 X_DOMAINS = '*'
 
+RENDERERS = ['eve.render.JSONRenderer']
+
 DOMAIN = {
     'articles': endpoints.articles.settings.settings,
     'current_issues': endpoints.current_issues.settings.settings
