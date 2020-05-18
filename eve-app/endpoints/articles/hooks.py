@@ -10,4 +10,8 @@ def pre_GET_articles_issue_filter(request, lookup):
     if "issue" in request.args:
         lookup["journal.issue"] = int(request.args["issue"])
 
-hooks = [pre_GET_articles_eissn_filter, pre_GET_articles_year_filter, pre_GET_articles_issue_filter]
+def pre_GET_articles_id_filter(request, lookup):
+    if "id" in request.args:
+        lookup["_id"] = request.args["id"]
+
+hooks = [pre_GET_articles_eissn_filter, pre_GET_articles_year_filter, pre_GET_articles_issue_filter, pre_GET_articles_id_filter]
