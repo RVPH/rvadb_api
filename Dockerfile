@@ -10,3 +10,4 @@ RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-
     && apk del build-dependencies
 
 ADD . /app
+CMD /usr/local/bin/gunicorn -w 2 app:app
